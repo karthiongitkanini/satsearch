@@ -1,0 +1,61 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    
+    <mat-card class="box">
+      <mat-card-header>
+        <nav class="navbar">
+
+              <!-- logo -->
+              <div class="navbar-brand">
+                <a class="navbar-item">
+                  <i class="material-icons">person</i>
+                </a>
+              </div>
+        </nav>
+    </mat-card-header>
+
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Login To Book</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                   
+                  <mat-form-field class="example-full-width">
+                      
+                
+                  <input matInput placeholder="Enter Email ID" [(ngModel)]="login.Email" name="email" #userName required>
+                  <mat-icon matPrefix>mail</mat-icon>
+                 
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+              <td><mat-form-field class="example-full-width">
+                 
+                <input matInput placeholder="Enter Password" [(ngModel)]="login.Password" type="password" name="password" #userPassword required>
+                <mat-icon matPrefix>lock</mat-icon>
+              </mat-form-field></td>
+            </tr>
+          </table>
+          </form>
+          <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+        </mat-card-content>
+        <mat-card-actions align="end">
+      <div class="forgotPassword">
+
+          <button type="submit" mat-button style="align-self: flex-end;"><span routerLink="/forgot-password">Forgot Password...</span></button>
+        
+        
+      </div>
+         </mat-card-actions>                    
+          <mat-card-actions>
+              <button  mat-stroked-button color="primary" class="btn-block" (click)="getUser()">Log In</button>
+            </mat-card-actions>
+          </mat-card>
+    </mat-card>
+</div>
+
+
